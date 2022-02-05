@@ -1,0 +1,80 @@
+<section class="breadcrums_sec">
+  <div class="container">
+    <div class="breadcrums">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Account</a>
+        </li>
+        <li>My Wishlist</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- breadcrums_sec End -->
+<section class="whishlist_sec product_item_sec">
+  <div class="container">
+    <h4 class="page-heading">My Wishlist</h4>
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12 my-2" *ngFor="let product of filteredProducts">
+        <div class="card h-100">
+          <div class="d-flex pr-2 justify-content-end">
+            <img *ngIf="product.isWishlist" (click)="removeItemFromWishlist(product)" class="heart_icon"
+              src="../../assets/nav-img/wishlist.svg" />
+            <img *ngIf="!product.isWishlist" (click)="addItemToWishlist(product)" class="heart_icon"
+              src="../../assets/nav-img/wishlist-not.svg" />
+          </div>
+          <div class="wishlist_img">
+            <figure>
+              <img [src]="product.image ? product.image : defaultProductImgUrl" class="card-img-top" alt="..." />
+            </figure>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h4 class="card-title text-ellipsis mb-1">
+                <b>{{ product.name }}</b>
+              </h4>
+              <div class="row gx-0 card_quantity_blk">
+                <p class="card-text">{{ product.description }}</p>
+                <div *ngIf="product.quantity > 0" class="d-flex counter-btn-1 align-self-center">
+                  <button class="counter-btn btn-sm" (click)="handleProductQuantity('dec', product)">
+                    <i class="bi bi-dash"></i>
+                  </button>
+                  <p class="para3 px-3 m-0">
+                    <b>{{ product.quantity }}</b>
+                  </p>
+                  <button class="counter-btn btn btn-sm" (click)="handleProductQuantity('inc', product)">
+                    <i class="bi bi-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body d-flex justify-content-between py-0">
+            <div class="price_details">
+              <p class="card-text" class="m-0 p-0">PRICE</p>
+              <h2 class="card-title">
+                <b>&#x20b9;{{ product.price }}</b>
+              </h2>
+            </div>
+            <div>
+              <div *ngIf="product.quantity > 0" class="d-flex counter-btn-1 align-self-center">
+                <button class="counter-btn" (click)="handleProductQuantity('dec',product)">-</button>
+                <p class="para3 px-3 m-0 "><b>{{product.quantity}}</b></p>
+                <button class="counter-btn" (click)="handleProductQuantity('inc',product)">+</button>
+              </div>
+              <!-- <img style="position: relative;left: 170px;" src="../../assets/nav-img/productcard.svg"> -->
+              <button *ngIf="product.quantity === 0" _ngcontent-fyt-c103=""
+                class="btn btn-primary ms-4 d-sm-block d-none mt-2" (click)="addToCart(product)">
+                <i _ngcontent-fyt-c103="" class="bi bi-cart3"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

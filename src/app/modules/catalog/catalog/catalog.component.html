@@ -1,0 +1,185 @@
+<div class="container" style="margin-top: 20px; margin-bottom: 20px">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Search for products" [(ngModel)]="model" [ngbTypeahead]="search" popupClass="sample" />
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 30px; background-image: url('../../assets/nav-img/bg123.png');  background-size:contain;"
+  class="container-fluid product-slide-1">
+  <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active trigger"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="trigger"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="trigger"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="trigger"
+        aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="product-slide">
+          <img style="padding: 10px" src="../../assets/nav-img/product-1.jpg" class="d-block" alt="Our brands" />
+          <img style="padding: 10px" src="../../assets/nav-img/product-2.jpg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="product-slide">
+          <img style="padding: 10px" src="../../assets/nav-img/product-1.jpg" class="d-block" alt="Our brands" />
+          <img style="padding: 10px" src="../../assets/nav-img/product-2.jpg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="product-slide">
+          <img style="padding: 10px" src="../../assets/nav-img/product-1.jpg" class="d-block" alt="Our brands" />
+          <img style="padding: 10px" src="../../assets/nav-img/product-2.jpg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="product-slide">
+          <img style="padding: 10px" src="../../assets/nav-img/product-1.jpg" class="d-block" alt="Our brands" />
+          <img style="padding: 10px" src="../../assets/nav-img/product-2.jpg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of the slide section-->
+<section class="product_item_sec">
+  <div style="padding-top: 100px; background-color: #f2f2f2" class="container-fluid">
+    <div class="container">
+      <ul style="padding-top: 20px; padding-bottom: 20px" class="nav nav-tabs" id="myTab">
+        <li *ngFor="let tab of tabs" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            (mouseenter)="getSubCategories(tab)" [innerHTML]="tab.name | sanitize"></a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let subTab of subTabs">
+              <a class="dropdown-item" [innerHTML]="subTab.name | sanitize" (click)="OnCategorySelect(subTab)"></a>
+            </li>
+            <hr />
+            <li>
+              <a class="dropdown-item" [innerHTML]="allSubTab.name | sanitize"
+                (click)="OnCategorySelect(allSubTab)"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!--   -->
+
+      <h2 style="padding-top: 20px; padding-bottom: 20px" class="heading2">
+        Featured Products
+      </h2>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-2 col-xs-12 my-2" *ngFor="let product of filteredProducts">
+              <div class="card h-100">
+                <div class="d-flex pr-2 justify-content-end">
+                  <img *ngIf="product.isWishlist" (click)="removeItemFromWishlist(product)" class="heart_icon"
+                    src="../../assets/nav-img/wishlist.svg" />
+                  <img *ngIf="!product.isWishlist" (click)="addItemToWishlist(product)" class="heart_icon"
+                    src="../../assets/nav-img/wishlist-not.svg" />
+                </div>
+                <div class="wishlist_img">
+                  <figure>
+                    <img [src]="
+                        product.image ? product.image : defaultProductImgUrl
+                      " class="card-img-top" alt="..." />
+                  </figure>
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <h2 class="card-title mb-1 text-ellipsis">
+                      <b>{{ product.name }}</b>
+                    </h2>
+                    <div class="row gx-0 card_quantity_blk">
+                      <p class="card-text">{{ product.description }}</p>
+                      <div *ngIf="product.quantity > 0" class="d-flex counter-btn-1 align-self-center">
+                        <button class="counter-btn btn btn-sm" (click)="updateCart(product,'dec')">
+                          <i class="bi bi-dash"></i>
+                        </button>
+                        <p class="para3 px-3 m-0">
+                          <b>{{ product.quantity }}</b>
+                        </p>
+                        <button class="counter-btn btn btn-sm" (click)="updateCart(product,'inc')">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <p class="card-text" class="m-0 p-0">PRICE</p>
+                    <h2 class="card-title">
+                      <b>&#x20b9;{{ product.price }}</b>
+                    </h2>
+                  </div>
+                  <div>
+                    <!-- <img style="position: relative;left: 170px;" src="../../assets/nav-img/productcard.svg"> -->
+                    <button *ngIf="product.quantity === 0" _ngcontent-fyt-c103=""
+                      class="btn btn-primary ms-4 d-sm-block d-none mt-2" (click)="updateCart(product,'inc')">
+                      <i _ngcontent-fyt-c103="" class="bi bi-cart3"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--end of the all section-->
+<div style="padding-bottom: 100px; background-color: #f2f2f2" class="container-fluid">
+  <div id="demo1" class="carousel slide container" data-bs-ride="carousel">
+    <h2 class="heading3">Our Brand Partners</h2>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active trigger" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#demo1" data-bs-slide-to="1" class="trigger" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#demo1" data-bs-slide-to="2" class="trigger" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="icon-slide">
+          <img src="../../assets/nav-img/catalog-icon-1.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-2.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-3.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-4.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-5.svg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="icon-slide">
+          <img src="../../assets/nav-img/catalog-icon-1.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-2.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-3.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-4.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-5.svg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="icon-slide">
+          <img src="../../assets/nav-img/catalog-icon-1.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-2.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-3.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-4.svg" class="d-block" alt="Our brands" />
+          <img src="../../assets/nav-img/catalog-icon-5.svg" class="d-block" alt="Our brands" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="div" *ngFor="let product of products">
+    <app-product-details [product]="product"></app-product-details>
+  </div>
+</div> -->

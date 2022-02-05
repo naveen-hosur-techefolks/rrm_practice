@@ -1,0 +1,33 @@
+$btn1-width: 239px;
+$btn1-height: 64px;
+$btn1-border-radius: 16px;
+$btn1-color: #1d1d1d;
+$btn1-font-size: 20px;
+$btn1-line-height: 32px;
+$btn1-letter-spacing: -0.01em;
+
+.btn1 {
+    width: $btn1-width;
+    height: $btn1-height;
+    border-radius: $btn1-border-radius;
+    background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+    border: none;
+    color: #ffff;
+    font-size: $btn1-font-size;
+    line-height: $btn1-line-height;
+    letter-spacing: $btn1-letter-spacing;
+    font-family: $btn-font-falmily;
+}
+.btn2 {
+    width: $btn1-width;
+    height: $btn1-height;
+    border-radius: $btn1-border-radius;
+    background: #ffffff;
+    border: none;
+    color: $btn1-color;
+    font-size: $btn1-font-size;
+    line-height: $btn1-line-height;
+    letter-spacing: $btn1-letter-spacing;
+    font-family: $btn-font-falmily;
+    border: 1px solid #bfbfbf;
+}

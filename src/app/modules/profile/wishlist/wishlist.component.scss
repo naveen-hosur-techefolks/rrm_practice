@@ -1,0 +1,117 @@
+.bg-section {
+  background: #e5e5e5;
+  height: 100vh;
+}
+.fa-icon {
+  color: #ff7438;
+}
+.section-bg {
+  border-radius: 30px;
+}
+
+.page-heading {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+}
+
+.address {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  color: #000000;
+}
+.address-2 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* or 145% */
+
+  color: gray;
+}
+.edit {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  color: #000000;
+}
+.delet {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  color: #ff3700;
+}
+.address-book {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 32px;
+  /* identical to box height, or 76% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.saved-address {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.175em;
+
+  color: #000000;
+}
+.btn-address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+
+  width: 1455px;
+  height: 87px;
+  border: none;
+  position: relative;
+  top: 50px;
+  right: 50px;
+
+  /* Finalised Gradient - Primary */
+
+  background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+  border-radius: 16px;
+}
+.add-new {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  letter-spacing: -0.01em;
+
+  color: #ffffff;
+}

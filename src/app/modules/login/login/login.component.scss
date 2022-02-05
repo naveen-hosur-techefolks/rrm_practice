@@ -1,0 +1,85 @@
+@import "../../../../assets/styles/aboutusimg.scss";
+@import "../../../../assets/styles/heading2.scss";
+@import "../../../../assets/styles/para2.scss";
+@import "../../../../assets/styles/heading3.scss";
+@import "../../../../assets/styles/heading4.scss";
+@import "../../../../assets/styles/para3.scss";
+@import "../../../../assets/styles/tahheading.scss";
+@import "../../../../assets/styles/button1.scss";
+@import "../../../../assets/styles/heading1.scss";
+@import "../../../../assets/styles/button2.scss";
+
+.heading3 {
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  letter-spacing: $h3-letter-spacing;
+  color: $h3-font-color;
+  font-weight: $h3-font-weight;
+  margin-bottom: 15px;
+  @media only screen and (max-width: 992px) {
+    font-size: 22px;
+  }
+}
+.btn1 {
+  width: $btn1-width;
+  height: $btn1-height;
+  border-radius: $btn1-border-radius;
+  background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+  border: none;
+  color: #ffff;
+  font-size: $btn1-font-size;
+  line-height: $btn1-line-height;
+  letter-spacing: $btn1-letter-spacing;
+  font-family: $btn-font-falmily;
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    max-width: 230px;
+    height: 50px;
+  }
+}
+.para3 {
+  font-family: $para2-font-family;
+  font-size: $para3-font-size;
+  line-height: $para3-line-height;
+  letter-spacing: $para3-letter-spacing;
+  color: $para3-color;
+  opacity: $para2-opacity;
+  @media only screen and (max-width: 992px) {
+    font-size: 16px;
+  }
+}
+.text {
+  color: #ff0000;
+}
+.login {
+  text-align: center;
+}
+.form-control {
+  background: #efefef;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  height: 60px;
+  padding: 15px;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  @media only screen and (max-width: 992px) {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+.login-2 {
+  text-align: center;
+  justify-content: center;
+}
+.error-message {
+  margin-bottom: 5px;
+  color: #ff0000;
+  i {
+    vertical-align: middle;
+    font-size: 20px;
+  }
+}

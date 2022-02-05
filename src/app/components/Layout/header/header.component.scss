@@ -1,0 +1,77 @@
+@import "../../../../assets/styles/heading4.scss";
+@import "../../../../assets/styles/heading2.scss";
+@import "../../../../assets/styles/para2.scss";
+@import "../../../../assets/styles/button1.scss";
+@import "../../../../assets/styles/button2.scss";
+@import "../../../../assets/styles/para3.scss";
+
+.nav-link {
+  color: black;
+  font-size: 20px;
+  padding: 14px 16px;
+  font-weight: 400;
+  @media only screen and (max-width: 1199px) {
+    margin: 0 !important;
+    font-size: 14px;
+  }
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: rgba(0, 0, 0, 1) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.top-nav-1 {
+  font-family: $para2-font-family;
+  box-shadow: 0px 5px 10px rgba(255, 112, 0, 0.1);
+}
+
+.disc {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topnav-right {
+  float: right;
+}
+.icons {
+  padding: 10px;
+}
+
+.btn1 {
+  height: 52px;
+  width: 52px;
+  border-radius: 100%;
+}
+.bi {
+  font-size: 24px;
+}
+
+.badge {
+  padding: 0.1em 0.1em;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  line-height: 18px;
+  background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+  font-style: normal;
+}
+
+@media (min-width: 1500px) {
+  .topnav .container {
+    max-width: 1680px;
+  }
+
+  .container {
+    max-width: 1720px;
+  }
+}
+.profile-dropdown-menu {
+  min-width: 10rem !important;
+  left: auto !important;
+  top: auto !important;
+}

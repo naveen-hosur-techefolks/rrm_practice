@@ -1,0 +1,87 @@
+@import "../../../../assets/styles/bg-color";
+@import "../../../../assets/styles/page-heading";
+@import "../../../../assets/styles/saved-address";
+@import "../../../../assets/styles/delet";
+@import "../../../../assets/styles/edit";
+@import "../../../../assets/styles/address";
+@import "../../../../assets/styles/btn-lg";
+@import "../../../../assets/styles/page-heading";
+
+*{
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+
+}
+    .card{
+        border-radius: 30px;
+    }
+    .bg{
+        background: #E5E5E5;
+        height: 100vh;
+        }
+    .page-heading{
+        width: $ph-font-width;
+        height: $ph-font-height;
+        font-weight: $ph-font-weight;
+        font-size: $ph-font-size;
+        letter-spacing: $ph-letter-spacing;
+        color:$ph-color;
+        }
+    .cards{
+        border-radius: 30px;
+        }           
+    .address{
+        font-weight:$ad-font-weight;
+        font-size: $ad-font-size;
+        line-height: $ad-line-height;
+        color: #000000;
+            }
+    .address-1{
+        font-weight:$ad-font-weight;
+        font-size: $ad-font-size;
+        line-height: $ad-line-height;
+        color: #818080;  
+            }        
+    .delet{
+        font-weight: $dl-font-weight;
+        font-size: $dl-font-size;
+        line-height: $dl-line-height;
+        color:$dl-color;
+            }
+    .edit{
+        font-weight: $dl-font-weight;
+        font-size: $dl-font-size;
+        line-height: $dl-line-height;
+        color: $ed-color;
+            }
+    .fa{
+        color: #FF7438;
+            }
+    .bg{
+        background-color: $bg-color;
+            }
+    .page-heading-1{
+        font-size: $ph-font-size;
+        width: $ph-font-width;
+        height: $ph-font-height;
+        font-weight: $ph-font-weight;
+        line-height: $ph-font-height;
+        letter-spacing: $ph-letter-spacing;
+        color: $ph-color;
+             }
+    .saved-address-1{
+        font-size: $sa-font-size;
+        width: $sa-font-weight;
+        height: $sa-line-height;
+        font-weight: $sa-font-weight;
+        line-height: $sa-line-height;
+        letter-spacing: $sa-letter-spacing;
+             }
+    .btn-full{
+        width: $btn-width;
+        height: $btn-height;
+        border: $btn-border;
+        border-radius: $btn-border-radius;
+        background: $btn-background-color;
+        }
+            

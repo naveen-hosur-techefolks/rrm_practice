@@ -1,0 +1,60 @@
+  /*--end of the section*/
+ @import "../../../../assets/styles/page-heading";
+ @import "../../../../assets/styles/labels";
+ @import "../../../../assets/styles/update-profile";
+ @import "../../../../assets/styles/btn-lg";
+ @import "../../../../assets/styles/bg-color";
+ @import "../../../../assets/styles/input-fields";
+ @import "../../../../assets/styles/placeholders";
+
+
+.page-heading{
+    width: $ph-font-width;
+    height: $ph-font-height;
+    font-weight: $ph-font-weight;
+    font-size: $ph-font-size;
+    letter-spacing: $ph-letter-spacing;
+    color:$ph-color;
+    }
+.labels-1{
+    font-size: $lb-font-size;
+    color: $lb-color;
+    line-height: $lb-line-height;
+    font-weight: $lb-font-weight;
+    width: $lb-width;
+    height: $lb-height;
+    }
+.btn-full{
+    width: $btn-width;
+    height: $btn-height;
+    border: $btn-border;
+    border-radius: $btn-border-radius;
+    background: $btn-background-color;
+    }
+.update-profile{
+    height: $bt-height;
+    font-weight: $bt-font-weight;
+    font-size: $bt-font-size;
+    line-height: $bt-line-height;
+    letter-spacing: $bt-letter-spacing;
+    color: $bt-color;
+    flex: $bt-flex;
+    order: $bt-order;
+    flex-grow:$bt-flex-grow;
+    margin: $bt-margin;
+    }
+.input-fields{
+    height: $if-height;
+    background: $if-background;
+    border: $if-border;
+    border-radius: $if-border-radius;
+    box-sizing: $if-box-sizing;
+    }
+:placeholder-shown{
+    font-size: $pl-font-size;
+    line-height: $pl-line-height;
+    color:$pl-color;
+    }
+.bg{
+    background-color: $bg-color;
+    }

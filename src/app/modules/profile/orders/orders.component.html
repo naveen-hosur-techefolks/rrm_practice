@@ -1,0 +1,52 @@
+<section class="breadcrums_sec">
+  <div class="container">
+    <div class="breadcrums">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Account</a>
+        </li>
+        <li>Order History</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- breadcrums_sec End -->
+<div class="container-main">
+  <section class="bg-section order_sec">
+    <div class="container">
+      <h4 class="page-heading">Order History</h4>
+      <div class="row order-cards py-3">
+
+        <div class="col-sm-6" *ngFor="let order of orders">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-lg-4">
+                <img src="../../../../assets/order/order-product1.png" class="img-fluid rounded-start"
+                  alt="Order Product" />
+              </div>
+              <div class="col-lg-8">
+                <div class="card-body">
+                  <h5 class="product-details">Order To be delivered to {{order.deliveryAddress.name}}</h5>
+                  <h5 class="delivery-details">Order on  {{order.createdOn | date: "dd:MMM:yyyy hh-mm-ss"}}</h5>
+                  <div class=" d-flex products btn-links justify-content-between">
+                    <a class="mrp " href="#">Rs. {{order.totalPrice}}</a>
+                    <div>
+                      <label>Status:</label><span>{{order.orderStatus.name}}</span>
+                    </div>
+                    <div class="text-end">
+                      <a class=" view-order mt-5" [routerLink]="['/profile/orderdetails',order.id]">View Orders</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End -->
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

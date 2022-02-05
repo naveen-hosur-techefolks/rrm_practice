@@ -1,0 +1,70 @@
+<div class="top-nav-1">
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+      <a class="navbar-brand" routerLink="/home">
+        <img style="width: 192px; height: 40px" src="../assets/nav-img/xLayer_x0020_1.svg" alt="Shopping Site"
+          width="30" height="24" class="d-inline-block align-top" />
+        <span class="hidden"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+        aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="align-self-center">
+            <a class="nav-link mx-3" routerLinkActive="active" routerLink="/home">Home</a>
+          </li>
+          <li class="align-self-center">
+            <a class="nav-link mx-3" routerLinkActive="active" routerLink="/about-us">About us</a>
+          </li>
+          <li class="align-self-center">
+            <a class="nav-link mx-3" routerLinkActive="active" routerLink="/approach">Approach</a>
+          </li>
+          <li class="align-self-center">
+            <a class="nav-link mx-3" routerLinkActive="active" routerLink="/catalog">Catalog</a>
+          </li>
+          <li class="align-self-center">
+            <a class="nav-link mx-3" routerLinkActive="active" routerLink="/contact-us">Contact us</a>
+          </li>
+
+          <li class="align-self-center" *ngIf="!isLoginAvailable">
+            <a class="nav-link mx-3" routerLinkActive="active" routerLink="/login">Login</a>
+          </li>
+          <li class="align-self-center cursor-pointer">
+            <i class="bi bi-cart3" routerLinkActive="active" routerLink="/cart">
+              <span class="top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{ cartCount$ | async }}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </i>
+          </li>
+          <li class="align-self-center" *ngIf="isLoginAvailable">
+            <i class="bi bi-person-fill nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+              aria-expanded="false">
+            </i>
+            <ul class="dropdown-menu profile-dropdown-menu px-2 cursor-pointer">
+              <li class="py-1" routerLinkActive="active" routerLink="/profile">
+                Profile
+              </li>
+              <li class="py-1" routerLinkActive="active" routerLink="/profile/orders">
+                My Order
+              </li>
+              <li class="py-1" routerLinkActive="active" routerLink="/profile/wishlist">
+                My Wishlist
+              </li>
+              <li class="py-1" routerLinkActive="active" routerLink="/profile/addressbook">
+                Address Book
+              </li>
+              <li (click)="logout()">Logout</li>
+            </ul>
+          </li>
+          <!-- <li class="align-self-center" *ngIf="isLoginAvailable">
+                      <a class="nav-link mx-3">{{userName}}</a>
+                  </li> -->
+        </ul>
+      </div>
+      <!-- Cart icon here -->
+    </nav>
+  </div>
+</div>

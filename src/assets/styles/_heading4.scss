@@ -1,0 +1,16 @@
+$h4-font-style: "normal";
+$h4-font-size: 20px;
+$h4-line-height: 28px;
+$h4-letter-spacing: -0.01em;
+$h4-color: #1d1d1d;
+$h4-opacity: 0.9;
+$h4-font-family: "Satoshi", sans-serif;
+
+.heading4 {
+    font-family: $h4-font-family;
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+    letter-spacing: $h4-letter-spacing;
+    color: $h4-color;
+    margin-top: 30px;
+}

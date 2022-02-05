@@ -1,0 +1,120 @@
+<section class="bg-section py-5">
+  <div class="container justify-content-center">
+    <h4 class="page-heading py-5">Order Details</h4>
+    <div class="row py-5">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
+        <div class="card cards">
+          <div class="card-body">
+            <h4 class="page-heading-1">
+              Package Status {{ order?.orderStatus?.name }}
+            </h4>
+            <hr />
+
+            <div class="d-flex py-4" *ngFor="let orderProduct of orderProducts">
+              <div class="px-1 mt-2">
+                <img class="product-img" src="{{ orderProduct.product.image }}" />
+              </div>
+              <div class="px-5">
+                <h5 class="product-details">{{ orderProduct.product.name }}</h5>
+                <div class="d-flex flex-div justify-content-between">
+                  <div>
+                    <h5 class="delivery-details">
+                      Quantity : {{ orderProduct.quantity }}
+                    </h5>
+                    <h5 class="delivery-details flex-2">
+                      Ordered on {{ order?.createdOn | date }}
+                    </h5>
+                  </div>
+                  <div class="total-1 text-end mx-5 px-5 mx-5 mt-2">
+                    <h5 class="total">TOTAL</h5>
+                    <h5 class="mrp-2">
+                      ₹ {{ orderProduct.quantity * orderProduct.sellingPrice }}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="card cards p-2">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-5">
+                <h5 class="price-1">SUBTOTAL</h5>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-5">
+                <h5 class="price-2">₹ {{ totalPrice }}</h5>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-5">
+                <h5 class="price-1">GST</h5>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-5">
+                <h5 class="price-2">₹ {{ gst }}</h5>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-5">
+                <h5 class="price-2 py-5">TOTAL</h5>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 px-3">
+                <h5 class="price-3 py-5">₹ {{ totalPrice + gst }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-11 px-1">
+          <div class="card cards p-4">
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="px-5 mt-4">
+                  <i class="fa fa-home fa-2x fa-icon" aria-hidden="true"></i>
+                </div>
+                <div class="px-2" *ngIf="order?.billingAddress">
+                  <h5 class="address-details">
+                    {{ order?.billingAddress?.name }}
+                  </h5>
+                  <h5 class="Address-details">
+                    {{ order?.billingAddress?.address1 }},{{
+                    order?.billingAddress?.address2
+                    }}
+                  </h5>
+                  <h5 class="Address-details">
+                    {{ order?.billingAddress?.city }}-{{
+                    order?.billingAddress?.postalCode
+                    }}
+                  </h5>
+                  <h5 class="Address-details-1">Telangana , India</h5>
+                  <br />
+                </div>
+                <div class="d-flex px-5">
+                  <div class="px-3 mt-4">
+                    <i class="fa fa-home fa-2x fa-icon" aria-hidden="true"></i>
+                  </div>
+                  <div class="px-2" *ngIf="order?.deliveryAddress">
+                    <h5 class="address-details">
+                      {{ order?.deliveryAddress?.name }}
+                    </h5>
+                    <h5 class="Address-details">
+                      {{ order?.deliveryAddress?.address1 }},{{
+                      order?.deliveryAddress?.address2
+                      }}
+                    </h5>
+                    <h5 class="Address-details">
+                      {{ order?.deliveryAddress?.city }}-{{
+                      order?.deliveryAddress?.postalCode
+                      }}
+                    </h5>
+                    <h5 class="Address-details-1">Telangana , India</h5>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

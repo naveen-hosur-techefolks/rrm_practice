@@ -1,0 +1,14 @@
+$para3-font-style: "normal";
+$para3-font-size: 20px;
+$para3-line-height: 32px;
+$para3-color: #1d1d1d;
+$para3-opacity: 0.7;
+$para3-letter-spacing: -0.01em;
+.para3 {
+    font-family: $para2-font-family;
+    font-size: $para3-font-size;
+    line-height: $para3-line-height;
+    letter-spacing: $para3-letter-spacing;
+    color: $para3-color;
+    opacity: $para2-opacity;
+}

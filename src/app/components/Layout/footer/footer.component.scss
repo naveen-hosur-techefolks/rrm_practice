@@ -1,0 +1,46 @@
+@import "../../../../assets/styles/heading4";
+@import "../../../../assets/styles/heading2.scss";
+@import "../../../../assets/styles/para2.scss";
+@import "../../../../assets/styles/button1.scss";
+@import "../../../../assets/styles/button2.scss";
+@import "../../../../assets/styles/para3.scss";
+
+.footer {
+  //   padding-top: 10px;
+  margin-top: 40px;
+  .heading4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      p {
+        color: #ff7852;
+      }
+    }
+  }
+  .footer-social-media {
+    a {
+      margin-right: 15px;
+      font-size: 22px;
+      color: #616161;
+      &:hover {
+        color: #222;
+      }
+    }
+  }
+  .footer_emails {
+    a {
+      display: block;
+      color: #1d1d1d;
+      &:hover {
+        color: #ff7852;
+      }
+    }
+  }
+}

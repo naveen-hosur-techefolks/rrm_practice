@@ -1,0 +1,108 @@
+/*@import "../../../../assets/styles/aboutusimg.scss";
+@import "../../../../assets/styles/heading2.scss";
+@import "../../../../assets/styles/para2.scss";
+@import "../../../../assets/styles/heading3.scss";
+@import "../../../../assets/styles/heading4.scss";
+@import "../../../../assets/styles/para3.scss";
+
+.aboutus-sec {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.aboutus-1 {
+  width: $img-width;
+  height: $img-height;
+}
+
+.heading2 {
+  margin-top: 90px;
+  font-style: $h2-style;
+  font-family: $h2-font-family;
+  font-weight: $h2-font-weight;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  color: $h2-font-color;
+  // margin-left: 10px;
+  // margin-right: 10px;
+  strong {
+    display: block;
+    font-weight: inherit;
+  }
+  @media only screen and (max-width: 1199px) {
+    margin-top: 0px;
+    font-size: 36px;
+    line-height: normal;
+    strong {
+      display: inline;
+    }
+  }
+}
+.para2 {
+  font-family: $para2-font-family;
+  font-size: $para2-font-size;
+  line-height: $para2-line-height;
+  letter-spacing: $para2-letter-spacing;
+  color: $para2-color;
+  opacity: $para2-opacity;
+}
+.cooke2 {
+  position: relative;
+  bottom: 90%;
+  left: 102%;
+}
+.cooke4 {
+  position: relative;
+  top: 10%;
+  left: 100%;
+}
+
+.solution-section {
+  background-color: #f2fff2;
+}
+.solution-para {
+  padding-top: 20px;
+}
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+.aboutus-leadership {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f8fff7;
+}
+.heading3 {
+  padding-top: 150px;
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  letter-spacing: $h3-letter-spacing;
+  color: $h3-font-color;
+  font-weight: $h3-font-weight;
+  @media only screen and (max-width: 1199px) {
+    padding-top: 0;
+  }
+}
+.heading4 {
+  font-family: $h2-font-family;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  letter-spacing: $h4-letter-spacing;
+  color: $h4-color;
+  margin-top: 30px;
+}
+.para3 {
+  font-family: $para2-font-family;
+  font-size: $para3-font-size;
+  line-height: $para3-line-height;
+  letter-spacing: $para3-letter-spacing;
+  color: $para3-color;
+  opacity: $para2-opacity;
+}
+@media only screen and (max-width: 980px) {
+  .ipad-column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+*/

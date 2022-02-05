@@ -1,0 +1,133 @@
+.page-heading {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+}
+// .bg-section {
+//   // background: #e5e5e5;
+//   background-color: #faf8f7;
+//   height: 100vh;
+// }
+.order_sec {
+  background-color: #faf8f7;
+  padding: 50px 0;
+  > .container {
+    max-width: 1200px;
+    .order-cards {
+      border: 0;
+      .card {
+        border-radius: 15px;
+        border: 0;
+        .row {
+          align-items: center;
+          padding: 0 15px;
+          img {
+            background: #ffefe5;
+            padding: 15px;
+            border-radius: 6px;
+            @media only screen and (max-width: 980px) {
+              margin: 15px auto;
+              display: block;
+            }
+          }
+          .card-body {
+            h5 {
+              font-weight: 600;
+              margin-bottom: 0px;
+              color: #323232;
+            }
+            .card-text {
+              font-family: "Work Sans", sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 34px;
+              margin-bottom: 10px;
+              color: #323232;
+              opacity: 0.6;
+            }
+            small {
+              font-family: "Work Sans", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 28px;
+              color: #ff7852 !important;
+            }
+            a {
+              font-family: "Work Sans", sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 23px;
+              color: #ff7438;
+              text-align: right;
+              &:hover {
+                color: #323232;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .cards {
+//   border-radius: 30px;
+// }
+// .product-img {
+//   background: #ffefe6;
+//   border-radius: 22px;
+// }
+// .product-details {
+//   font-family: "Work Sans", sans-serif;
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 25.3409px;
+//   line-height: 34px;
+//   /* identical to box height, or 133% */
+
+//   color: #323232;
+// }
+// .delivery-details {
+//   font-family: "Work Sans", sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 19.7096px;
+//   line-height: 34px;
+//   /* identical to box height, or 171% */
+
+//   color: #323232;
+
+//   opacity: 0.6;
+// }
+// .mrp {
+//   font-family: "Work Sans", sans-serif;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 27px;
+//   line-height: 23px;
+//   /* identical to box height, or 83% */
+//   text-decoration: none;
+
+//   color: #ff7852;
+// }
+// .view-order {
+//   position: relative;
+//   left: 120px;
+//   font-family: "Work Sans", sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 22.5253px;
+//   line-height: 23px;
+//   /* identical to box height, or 100% */
+//   text-decoration: none;
+
+//   color: #ff7438;
+// }

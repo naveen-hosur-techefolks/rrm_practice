@@ -1,0 +1,261 @@
+<div class="container">
+  <div *ngIf="!(cartItems.length > 0);else cart" class="text-center">
+    <!-- <h3 class="heading3" style="padding: 30px;">Please login to your account to see your cart !</h3>
+    <button class="btn1" (click)="loginNow()">Login Now</button>
+    <div>
+      <img style="padding:30px;width: 583px;height: 530px;" class="responsive" src="../../assets/nav-img/login.jpg">
+    </div> -->
+    <h3 class="heading3" style="padding: 30px;">Your card is empty. Shop items to checkout !</h3>
+    <button class="btn1" (click)="shopNow()">Shop Now</button>
+    <div>
+      <img style="padding:30px;width: 583px;height: 530px;" class="responsive"
+        src="../../assets/nav-img/empty-cart.png">
+    </div>
+  </div>
+  <ng-template #cart>
+    <div class="row">
+      <!--sections-->
+      <section class="py-5">
+        <div class="container py-5">
+          <h3 class="checkout py-5">Checkout</h3>
+
+          <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
+              <div class="mt-5 border rounded-3">
+                <h6 class="px-5 pt-1 tag-line">Billing Address</h6>
+                <div class="d-flex align-items-center p-3 justify-content-between border-top border-bottom"
+                  *ngFor="let item of addressList;let i = index">
+                  <div class="d-flex">
+                    <div class="icon mx-2 align-self-center">
+                      <i class="fa fa-home fa-icon fa-2x "></i>
+                    </div>
+                    <label class="description px-3 mx-2" for="flexRadioBilling{{i}}">
+                      <p class="billing-address-1  my-1">{{item.name}}, {{item.address1}}</p>
+                      <p class=" "> {{item.address2}},{{item.city}}</p>
+                      <p class=" "> {{item.stateNavigation?.name}},{{item.countryNavigation?.name}}</p>
+
+                    </label>
+                  </div>
+                  <div class="input mx-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioBilling" id="flexRadioBilling{{i}}"
+                        [(ngModel)]="billingAddressId" value="{{item.id}}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 border rounded-3">
+                <h6 class="px-5 pt-1 tag-line">DELIVERY ADDRESSES</h6>
+                <div class="d-flex align-items-center p-3 justify-content-between border-top border-bottom"
+                  *ngFor="let item of addressList;let i = index">
+                  <div class="d-flex">
+                    <div class="icon mx-2 align-self-center">
+                      <i class="fa fa-home fa-icon fa-2x "></i>
+                    </div>
+                    <label class="description px-3 mx-2" for="flexRadioDelivery{{i}}">
+                      <p class="billing-address-1  my-1">{{item.name}}, {{item.address1}}</p>
+                      <p class=" "> {{item.city}}-{{item.postalCode}}</p>
+                      <p class=" "> {{item.stateNavigation?.name}},{{item.countryNavigation?.name}}</p>                    </label>
+                  </div>
+                  <div class="input mx-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDelivery" id="flexRadioDelivery{{i}}"
+                        [(ngModel)]="deliveryAddressId" value="{{item.id}}">
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center p-3 justify-content-between border-top border-bottom">
+                  <div class="d-flex">
+                    <div class="icon mx-2 align-self-center">
+                    </div>
+                    <button class="btn-add-address" (click)="addAddress()">Add New Address</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--first col-->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 ">
+              <h4 class="delivery-address your-items">Your Ordered Items</h4>
+
+              <div class="card bg-light p-3">
+                <div class="d-flex justify-content-around row py-3" *ngFor="let cart of cartItems">
+                  <div class="col-3">
+                      <img [src]="cart.product.image?cart.product.image:defaultProductImgUrl" class="img-default-size img-fluid" />
+                  </div>
+                  <div class="col-7">
+                    <h5 class="product-heading">{{cart?.product?.name}}</h5>
+                    <h6 class="product-tagline">{{cart?.product?.description}}</h6>
+                    <div class="d-flex counter-btn-1 ps-4">
+                      <button class="counter-btn" (click)="handleProductQuantity('dec',cart)" *ngIf="cart.quantity> 1">-</button>
+                      <img width="32px" src="https://cdn-icons-png.flaticon.com/512/216/216658.png" (click)="handleProductQuantity('dec',cart)" *ngIf="cart?.quantity === 1" />
+                      <p class="para3 px-3 m-0 "><b>{{cart?.quantity}}</b></p>
+                      <button class="counter-btn" (click)="handleProductQuantity('inc',cart)">+</button>
+                    </div>
+
+                  </div>
+                  <div class="col-2" *ngIf="cart?.product">
+                    <h4>₹ {{cart.product.price * cart.quantity}}</h4>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between pt-5">
+                  <div>
+                    <h4 class="price-cal">SUBTOTAL</h4>
+                  </div>
+                  <div class="price-1">
+                    ₹ {{totalPrice}}
+                  </div>
+
+                </div>
+                <div class="d-flex  justify-content-between pt-5">
+                  <div>
+                    <h4 class="price-cal">GST</h4>
+                  </div>
+                  <div class="price-2">
+                    ₹ {{gst}}
+                  </div>
+
+                </div>
+                <div class="d-flex justify-content-between py-5">
+                  <div>
+                    <h4 class="price-cal">TOTAL</h4>
+                  </div>
+                  <div class="price-3">
+                    ₹ {{totalPrice+gst}}
+                  </div>
+
+                </div>
+              </div>
+
+
+
+            </div>
+            <!--second col-->
+          </div>
+          <!--row-->
+        </div>
+        <!--container-->
+      </section>
+      <!--End of the entier first section-->
+      <!--end of the catalog section-->
+      <section class="bg-section py-5">
+        <div class="container">
+          <!-- <h3 class="sub-heading py-5">
+            Payment Method
+          </h3> -->
+          <div class="row">
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+              <div class="card card-btn-1 btn-lg btn-outline-light">
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <i class="fa fa-cc-visa fa-1x text-dark px-2" aria-hidden="true"></i>
+
+                  </div>
+                  <div class="px-3">
+                    <h4 class="sub-heading-2">9871-4298-1902-4908</h4>
+                    <h5 class="sub-heading-3 text-start text-dark">VISA</h5>
+
+
+                  </div>
+                  <div class="form-check mt-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+
+            <!--end of the first button-->
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+              <div class="card card-btn-1 btn-lg btn-outline-light">
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <i class="fa fa-cc-visa fa-1x text-dark px-2" aria-hidden="true"></i>
+
+                  </div>
+                  <div class="px-3">
+                    <h4 class="sub-heading-2">9871-4298-1902-4908</h4>
+                    <h5 class="sub-heading-3 text-start text-dark">VISA</h5>
+
+
+                  </div>
+                  <div class="form-check mt-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!--end of the second button-->
+
+
+
+          </div>
+          <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 my-5">
+            <button type="button" class="btn card-btn-3 btn-lg btn-outline-light">
+
+              <div class="d-flex align-items-center">
+                <div>
+                  <i class="fa fa-plus fa-1x text-dark px-4" aria-hidden="true"></i>
+                </div>
+                <div class="px-3">
+                  <h4 class="sub-heading-2">Add New Card</h4>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 my-5">
+            <button type="button" class="btn card-btn-3 btn-lg btn-outline-light">
+
+              <div class="d-flex align-items-center">
+                <div>
+                  <i class="fa fa-plus fa-1x text-dark px-4" aria-hidden="true"></i>
+                </div>
+                <div class="px-3 d-flex">
+                  <div>
+                    <h4 class="sub-heading-2">Cash On Delivery</h4>
+
+                  </div>
+                  <div class="check-box">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </button>
+          </div> -->
+
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center py-5">
+              <button class="btn btn-lg btn-primary button-123" type="button" (click)="checkout()">Proceed</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </section>
+
+
+
+
+    </div>
+
+
+
+  </ng-template>
+
+</div>
+<!--end of the existing section-->

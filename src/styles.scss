@@ -1,0 +1,273 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+}
+ul li a {
+  color: black;
+  padding: 20px;
+}
+.heading-2{
+  font-family: Satoshi;
+font-weight: bold;
+font-size: 48px;
+line-height: 56px;
+letter-spacing: -0.01em;
+color: #1D1D1D;
+}
+.para{
+font-size: 20px;
+line-height: 40px;
+letter-spacing: -0.01em;
+color: #1D1D1D;
+opacity: 0.7;
+}
+.heading-3{
+  font-size: 32px;
+line-height: 32px;
+letter-spacing: -0.01em;
+color: #1D1D1D;
+}
+.bg-section-1{
+  background: #f2fff2;
+}
+.bg-section-2{
+  background: #FFF7F2;
+}
+
+
+
+// @font-face {
+//   font-family: "Satoshi";
+//   src: local("Satoshi"), url(./assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf) format("truetype");
+// }
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+input,
+textarea {
+  font-family: "Work Sans", "sans-serif";
+  
+}
+
+.element-start {
+  display: flex;
+  justify-content: start;
+}
+.element-end {
+  display: flex;
+  justify-content: end;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+// breadcrums code
+.breadcrums_sec {
+  background: #f9f9f9;
+  padding: 25px 0;
+  box-shadow: 0px 4px 25px rgb(190 190 190 / 35%);
+  margin-bottom: 9px;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &:after {
+      content: "";
+      display: block;
+      float: none;
+      clear: both;
+    }
+    li {
+      float: left;
+      font-family: "Work Sans", sans-serif;
+      color: #ff7438;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: -0.02em;
+      padding-right: 25px;
+      position: relative;
+      &:after {
+        content: "\f285";
+        font-family: "bootstrap-icons";
+        color: #464646;
+        font-size: 14px;
+        font-weight: 600;
+        position: absolute;
+        right: 5px;
+        top: 0px;
+      }
+      &:last-child {
+        padding-right: 0;
+        &:after {
+          content: none;
+        }
+      }
+      a {
+        color: #464646;
+        position: relative;
+        text-decoration: none;
+        padding: 0;
+
+        &:hover {
+          color: #ff7438;
+        }
+      }
+    }
+  }
+}
+
+// breadcrums end
+
+// Product
+.product_item_sec {
+  padding: 50px 0;
+  background-color: #faf8f7;
+  @media only screen and (min-width: 1200px) {
+    padding: 80px 0;
+  }
+  .card {
+    border: 1px solid #ede5e1;
+    border-radius: 30px;
+    padding: 25px 20px;
+    &:hover {
+      .heart_icon {
+        animation: heartbeat 1s infinite;
+      }
+    }
+    .heart_icon {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 1;
+      cursor: pointer;
+    }
+    .card-body {
+      width: 100%;
+      padding: 15px 0 0;
+      .text-ellipsis {
+        width: calc(100% - 100px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .card-title {
+      font-size: 18px;
+      color: #1d1d1d;
+    }
+    .card_quantity_blk {
+      justify-content: space-between;
+    }
+    figure {
+      padding: 0;
+      margin: 0 0 10px;
+      position: relative;
+      padding-bottom: 66%;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    .card-text {
+      font-family: "Work Sans", sans-serif;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: -0.02em;
+      color: rgba(29, 29, 29, 0.7);
+      width: calc(100% - 110px);
+      margin: 0;
+    }
+    .counter-btn-1 {
+      width: 100px;
+      margin: 0;
+      justify-content: flex-end;
+      button {
+        width: 25px;
+        height: 25px;
+        line-height: 20px;
+        font-size: 22px;
+        text-align: center;
+        padding: 0;
+        background: #d8ffd8;
+        border-radius: 3.75px;
+        border: 0;
+        color: #5eac5e;
+        &:focus,
+        &:hover {
+          box-shadow: 0 0 0 0.25rem rgb(219 235 219);
+        }
+      }
+    }
+  }
+  .price_details {
+    p {
+      font-family: "Work Sans", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      color: rgba(#1d1d1d, 0.5);
+    }
+    .card-title {
+      font-size: 20px;
+    }
+  }
+  .btn-primary {
+    background-color: #ff5a2c;
+    border-color: #ff5a2c;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+    &:focus,
+    &:hover {
+      box-shadow: 0 0 0 0.25rem rgba(255, 90, 44, 0.25);
+    }
+  }
+}
+// Heart effect
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}

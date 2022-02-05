@@ -1,0 +1,149 @@
+@import "../../../../assets/styles/aboutusimg.scss";
+@import "../../../../assets/styles/heading2.scss";
+@import "../../../../assets/styles/para2.scss";
+@import "../../../../assets/styles/heading3.scss";
+@import "../../../../assets/styles/heading4.scss";
+@import "../../../../assets/styles/para3.scss";
+@import "../../../../assets/styles/button1.scss";
+
+.aboutus-sec {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.aboutus-1 {
+  width: $img-width;
+  height: $img-height;
+}
+.img-form {
+  padding-top: 60px;
+}
+
+.heading2 {
+  margin-top: 30px;
+  font-style: $h2-style;
+  font-family: $h2-font-family;
+  font-weight: $h2-font-weight;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  color: $h2-font-color;
+  // margin-left: 10px;
+  // margin-right: 10px;
+}
+.para2 {
+  font-family: $para2-font-family;
+  font-size: $para2-font-size;
+  line-height: $para2-line-height;
+  letter-spacing: $para2-letter-spacing;
+  color: $para2-color;
+  opacity: $para2-opacity;
+}
+.cooke2 {
+  position: relative;
+  bottom: 90%;
+  left: 102%;
+}
+.cooke4 {
+  position: relative;
+  top: 10%;
+  left: 100%;
+}
+.cooke-icon {
+  position: relative;
+  bottom: 5%;
+  left: 110%;
+  @media only screen and (max-width: 1199px) {
+    bottom: 0;
+    left: auto;
+    right: -30px;
+    margin-left: auto;
+  }
+}
+.solution-section {
+  background-color: #f2fff2;
+}
+.solution-para {
+  padding-top: 20px;
+}
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+.aboutus-leadership {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f8fff7;
+}
+.heading3 {
+  padding-top: 1 0px;
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  letter-spacing: $h3-letter-spacing;
+  color: $h3-font-color;
+  font-weight: $h3-font-weight;
+  margin-bottom: 15px;
+}
+.heading4 {
+  font-family: $h2-font-family;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  letter-spacing: $h4-letter-spacing;
+  color: $h4-color;
+  margin-top: 30px;
+}
+.para3 {
+  font-family: $para2-font-family;
+  font-size: $para3-font-size;
+  line-height: $para3-line-height;
+  letter-spacing: $para3-letter-spacing;
+  color: $para3-color;
+  opacity: $para2-opacity;
+}
+
+.form-control {
+  background: #efefef;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  height: 60px;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+}
+.btn1 {
+  width: $btn1-width;
+  height: $btn1-height;
+  border-radius: $btn1-border-radius;
+  background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+  border: none;
+  color: $btn1-color;
+  font-size: $btn1-font-size;
+  line-height: $btn1-line-height;
+  letter-spacing: $btn1-letter-spacing;
+  font-family: $btn-font-falmily;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: linear-gradient(93.85deg, #ffad00 100%, #fe1300 0%);
+  }
+}
+iframe {
+  margin-top: 15px;
+}
+.text-map {
+  background-color: #fffbf2;
+}
+.map-sec-1 {
+  background-color: #fffbf2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .para2 {
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        color: #ff7852;
+      }
+    }
+  }
+}

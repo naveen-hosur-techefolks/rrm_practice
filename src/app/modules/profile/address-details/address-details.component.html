@@ -1,0 +1,67 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add New Address</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="addressForm">
+    <div class="row p-1">
+      <div class="col-6">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Name" formControlName="name" class="form-control">
+      </div>
+    </div>
+    <div class="row p-1">
+      <div class="col-6">
+        <label for="address1">Address1</label>
+        <input type="text" name="address1" formControlName="address1" id="address1" placeholder="Address1" class="form-control">
+      </div>
+      <div class="col-6">
+        <label for="address2">Address2</label>
+        <input type="text" name="address2" formControlName="address2" id="address2" placeholder="Address2" class="form-control">
+      </div>
+    </div>
+    <div class="row p-1">
+      <div class="col-6">
+        <label for="landmark">Landmark</label>
+        <input type="text" name="landmark" formControlName="landmark" id="landmark" placeholder="Landmark" class="form-control">
+      </div>
+      <div class="col-6">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" formControlName="city" placeholder="City" class="form-control">
+      </div>
+    </div>
+    <div class="row p-1">
+      <div class="col-6">
+        <label for="pin">PIN Code</label>
+        <input type="number" name="pin" id="pin" formControlName="postalCode" placeholder="PIN Code" class="form-control">
+      </div>
+      <div class="col-6">
+        <label for="phonenumber">Phone Number</label>
+        <input type="number" name="phonenumber" id="phonenumber" formControlName="phonenumber" placeholder="Phone Number" class="form-control">
+      </div>
+    </div>
+    <div class="row p-1">
+      <div class="col-6">
+        <label for="country">Country</label>
+        <select id="country" name="country" class="form-select" formControlName="country" #countrySelect (change)='onCountrySelected(countrySelect.value)' >
+          <option selected>Select Country</option>
+            <option value="{{country.id}}" *ngFor="let country of countries">{{country.name}}</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label for="state">State</label>
+        <select id="state" name="state" class="form-select"  formControlName="state"  >
+          <option selected>Select State</option>
+          <option value="{{state.id}}" *ngFor="let state of states">{{state.name}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+
+
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" (click)="addAddress()">{{buttonLabel}}</button>
+</div>

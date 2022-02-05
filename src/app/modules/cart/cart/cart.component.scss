@@ -1,0 +1,405 @@
+@import "../../../../assets/styles/aboutusimg.scss";
+@import "../../../../assets/styles/heading2.scss";
+@import "../../../../assets/styles/para2.scss";
+@import "../../../../assets/styles/heading3.scss";
+@import "../../../../assets/styles/heading4.scss";
+@import "../../../../assets/styles/para3.scss";
+@import "../../../../assets/styles/tahheading.scss";
+@import "../../../../assets/styles/button1.scss";
+@import "../../../../assets/styles/heading1.scss";
+@import "../../../../assets/styles/button2.scss";
+
+.heading3 {
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  letter-spacing: $h3-letter-spacing;
+  color: $h3-font-color;
+  font-weight: $h3-font-weight;
+}
+.btn1 {
+  width: $btn1-width;
+  height: $btn1-height;
+  border-radius: $btn1-border-radius;
+  background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+  border: none;
+  color: #ffff;
+  font-size: $btn1-font-size;
+  line-height: $btn1-line-height;
+  letter-spacing: $btn1-letter-spacing;
+  font-family: $btn-font-falmily;
+}
+.para3 {
+  font-family: $para2-font-family;
+  font-size: $para3-font-size;
+  line-height: $para3-line-height;
+  letter-spacing: $para3-letter-spacing;
+  color: $para3-color;
+  opacity: $para2-opacity;
+}
+.sub-heading {
+  width: 219px;
+  height: 32px;
+
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 32px;
+  /* identical to box height, or 119% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.sub-heading-2 {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  color: #000000;
+}
+.heading-3 {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.billing-address {
+  margin-top: 30px;
+}
+
+.main-heading {
+  position: absolute;
+  width: 191px;
+  height: 32px;
+  left: 142px;
+  top: 434px;
+
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 32px;
+  /* identical to box height, or 76% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.cards-section {
+  margin-top: 30px;
+}
+.card-btn-2 {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.card-btn-21 {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.discription {
+  width: 300px;
+  height: 32px;
+  left: 181px;
+  top: 635px;
+
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.175em;
+
+  color: #000000;
+}
+
+.bg-section {
+  background: #e5e5e5;
+}
+.card-btn {
+  border-radius: 15px;
+}
+.card-btn-1 {
+  background: #ffffff;
+  border-radius: 21px;
+}
+.card-btn-3 {
+  width: 1038px;
+  height: 90px;
+  left: 138px;
+  top: 1741px;
+
+  background: #ffffff;
+  border: 1px solid #ede5e1;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+.input-field {
+  width: 1038px;
+  height: 70px;
+
+  background: #ffffff;
+  border: 1px solid #ede5e1;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.form-group-2 {
+  position: relative;
+
+  .fa {
+    position: absolute;
+    left: 16.67%;
+    right: 16.67%;
+    top: 16.67%;
+    bottom: 16.67%;
+
+    border: 2px solid #ff7438;
+  }
+}
+.button-123 {
+  width: 100%;
+  height: 87px;
+  border: none;
+
+  /* J */
+
+  background: linear-gradient(93.85deg, #ffad00 0%, #fe1300 100%);
+  border-radius: 16px;
+}
+.check-box {
+  margin-left: 700px;
+  margin-top: 8px;
+}
+
+.check {
+  margin-left: 380px;
+  border-radius: 50px;
+}
+.billing-address-1 {
+  width: 100%;
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  color: #000000;
+}
+.india {
+  width: 100%;
+  height: 32px;
+
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  color: #000000;
+}
+.cards {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.card-2 {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.account-info {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  /* identical to box height, or 76% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.card {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.counter-btn{
+  background-color: #d8ffd8;
+}
+.price-2 {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  letter-spacing: -0.01em;
+
+  color: #000000;
+}
+.bbtn-footer {
+  width: 945px;
+  height: 78px;
+
+  background: #ff7852;
+  border-radius: 16px;
+}
+.fields {
+  width: 400px;
+  height: 64px;
+  left: 56px;
+  top: 161px;
+
+  background: #ffffff;
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.price-3 {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  /* identical to box height, or 100% */
+
+  letter-spacing: -0.02em;
+
+  color: #ff7438;
+}
+.tag-line {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.175em;
+
+  color: #000000;
+}
+.tag-line-2 {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: #ff7438;
+
+  /* identical to box height, or 145% */
+}
+.fa-icon {
+  color: #ff7438;
+}
+.price-1 {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  letter-spacing: -0.01em;
+
+  color: #000000;
+}
+.price-cal {
+  margin-left: 25px;
+}
+.card-3 {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.delivery-address {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 32px;
+  /* identical to box height, or 119% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.your-items {
+  position: relative;
+  bottom: 80px;
+}
+.checkout {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 32px;
+  /* identical to box height, or 76% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.product-heading {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  /* identical to box height, or 128% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+.product-tagline {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 24px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+
+  opacity: 0.7;
+}
+.price {
+  font-family: "Work Sans", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 32px;
+  /* identical to box height, or 128% */
+
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+}
+
+// IVS Styles
+
+.img-default-size {
+  min-height: 150px;
+  min-width: 100px;
+}
+
+
+.btn-add-address{
+  background: inherit;
+  border: inherit;
+}
